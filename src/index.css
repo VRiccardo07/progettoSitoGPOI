@@ -1,0 +1,118 @@
+:root {
+  --text: #e0e0e0;
+  --text-h: #ffffff;
+  --bg: #121212;
+  --border: #2c2c2c;
+  --code-bg: #1e1e1e;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(60, 60, 60, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.5) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/1.45 var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* layout principale */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+}
+
+#root {
+  width: 90%;
+  max-width: 1126px;
+  margin: 32px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* titoli */
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 16px 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  #root {
+    width: 95%;
+    margin: 16px auto;
+    padding: 16px;
+  }
+}
+
+/* paragrafi */
+p {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* codice */
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+  font-size: 15px;
+  line-height: 1.35;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+/* bottoni social */
+#social .button-icon {
+  background: var(--social-bg);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+#social .button-icon:hover {
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+}
